@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Les Bonnes Pièces</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Charger Vue.js AVANT ton script -->
+
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="pieces.js" defer></script>
 </head>
@@ -53,8 +53,8 @@
            <h3>{{ piece.nom }}</h3>
              <p>Catégorie : {{ piece.categorie }}</p>
              <p>Prix : {{ piece.prix }} MAD</p>
-             <p v-if="piece.disponible">✅ Disponible</p>
-               <p v-else>❌ Indisponible</p>
+             <p v-if="piece.disponible"> Disponible</p>
+               <p v-else> Indisponible</p>
  <button @click="ajouterAuPanier(piece)">Ajouter au panier</button>
 
 </div>
