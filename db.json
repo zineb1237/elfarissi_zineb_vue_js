@@ -1,0 +1,52 @@
+{
+  "emplois": [
+    {
+      "id": "0001",
+      "titre": "Développeur ",
+      "description": "Développement d'applications web en Vue.js",
+      "salaire": "30000",
+      "date": "2025-11-10",
+      "experience": 2
+    },
+    {
+      "id": "0002",
+      "titre": "Analyste",
+      "description": "Analyse de données et reporting",
+      "salaire": "25000",
+      "date": "2025-11-08",
+      "experience": 3
+    },
+    {
+      "id": "0003",
+      "titre": "Ingénieur Réseau",
+      "description": "Gestion et maintenance des infrastructures réseau",
+      "salaire": "11500",
+      "date": "2025-11-07",
+      "experience": 4
+    },
+    {
+      "id": "0004",
+      "titre": "Chef de projet",
+      "description": "Coordination de projets IT",
+      "salaire": "15000",
+      "date": "2025-11-05",
+      "experience": 5
+    },
+    {
+      "id": "0005",
+      "titre": "Designer",
+      "description": "Conception d'interfaces utilisateur attractives",
+      "salaire": "12000",
+      "date": "2025-11-06",
+      "experience": 2
+    },
+    {
+      "id": "f282",
+      "titre": "info",
+      "description": "info",
+      "salaire": "20000",
+      "date": "2025-11-30",
+      "experience": 2
+    }
+  ]
+}
