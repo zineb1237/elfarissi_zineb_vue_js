@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Vue.js",
+      "body": "Vue.js est un framework JavaScript progressif utilisé pour construire des interfaces utilisateur interactives. Il est léger et facile à apprendre pour débuter dans le développement front-end.",
+      "tags": ["vue", "javascript", "frontend"]
+    },
+    {
+      "id": "2",
+      "title": "JSON Server",
+      "body": "JSON Server permet de créer rapidement une API REST fake pour vos projets front-end. Il est idéal pour tester des fonctionnalités CRUD sans avoir besoin d'un vrai back-end.",
+      "tags": ["json-server", "api", "backend"]
+    },
+    {
+      "id": "3",
+      "title": "Les bases du CSS moderne",
+      "body": "Apprendre CSS moderne inclut la maîtrise de Flexbox, Grid, animations et transitions. Cela permet de créer des interfaces esthétiques et responsives.",
+      "tags": ["css", "design", "frontend"]
+    },
+    {
+      "id": "4",
+      "title": "développement web",
+      "body": "développement web implique HTML CSS et JavaScript. Comprendre les bases permet de construire des sites web fonctionnels et interactifs pour tous les types de projets.",
+      "tags": ["web", "html", "javascript"]
+    }
+  ]
+}

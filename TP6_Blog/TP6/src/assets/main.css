@@ -1,0 +1,38 @@
+@import './base.css';
+
+/* Style global pour ton blog */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+#app {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Liens */
+a {
+  color: #42b883;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #2c8f6b;
+}
+
+/* Pour éviter la grille bizarre de Vue */
+@media (min-width: 1024px) {
+  body {
+    display: block;
+  }
+
+  #app {
+    display: block;
+    padding: 20px;
+  }
+}

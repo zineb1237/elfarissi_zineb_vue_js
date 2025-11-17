@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Document</title>
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+	<p>Couleur de la police:</p>
+    <label>
+      <input type="radio" value="red" v-model="color"> Rouge
+    </label>
+    <label>
+      <input type="radio" value="blue" v-model="color"> Bleu
+    </label>
+      <p>
+      <label>
+        <input type="checkbox" v-model="visible"> Afficher/cacher le paragraphe?
+      </label>
+    </p>
+    
+      
+   
+    <p v-if="visible" :style="{ color: color }">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam pariatur 
+      mollitia et, inventore delectus. Doloribus laudantium maiores at necessitatibus?
+    </p>
+</div> 
+
+<script>
+	const appli = {
+		data () {
+				return {
+					
+                       color: 'black',         
+                        visible: true,          
+                        texte: "",             
+                       messageVisible: false
+				}
+                
+			},
+          methods: {
+              
+           
+           }    }
+	;
+	
+Vue.createApp(appli).mount("#app");
+</script>
+
+</body>
+</html>

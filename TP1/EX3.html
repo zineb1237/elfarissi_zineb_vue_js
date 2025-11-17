@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Document</title>
+ <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+<div id="monapp">
+	<h1> entrer un texte sans espace</h1>
+     <input type="text" v-model="texte" @input="verifier">
+     <p v-if="messageVisible" style="color: red;">
+          Le texte ne doit pas contenir d'espaces
+     </p>
+</div> 
+
+<script>
+	const appli = {
+		data () {
+				return {
+					texte: "", 
+                         messageVisible: false 
+				}
+			},
+          methods: {
+               verifier() {
+                     if (this.texte.includes(" ")) { 
+                             this.messageVisible = true; 
+                     } 
+                     else { 
+                             this.messageVisible = false; 
+                      }
+
+                    
+                }
+           }
+	};
+	
+Vue.createApp(appli).mount("#monapp");
+</script>
+
+</body>
+</html>

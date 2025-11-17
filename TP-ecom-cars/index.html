@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Les Bonnes Pièces</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="pieces.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="images/logo.png" alt="LOGO">
+      <h1>Les Bonnes Pièces</h1>
+    </header>
+
+    <main>
+      <input type="text" v-model="recherche" placeholder="Rechercher une pièce...">
+
+      <section class="filtres">
+        <h3>Filtres</h3>
+        <select v-model="categorieSelectionnee">
+          <option value="">Toutes</option>
+          <option value="Moteur">Moteur</option>
+          <option value="Transmission">Transmission</option>
+          <option value="Freinage">Freinage</option>
+          <option value="Suspension">Suspension</option>
+          <option value="Refroidissement">Refroidissement</option>
+          <option value="Électricité">Électricité</option>
+          <option value="Carrosserie">Carrosserie</option>
+          <option value="Échappement">Échappement</option>
+          <option value="Sécurité">Sécurité</option>
+          <option value="Carburant">Carburant</option>
+        </select>
+         <label>
+
+        <input type="checkbox" v-model="filtreDisponible">
+         Uniquement disponibles
+        </label>
+
+
+  <select v-model="triPrix">
+    <option value="">-- Trier par prix --</option>
+    <option value="croissant">Prix croissant</option>
+    <option value="decroissant">Prix décroissant</option>
+  </select>
+      </section>
+
+      <section class="fiches">
+        <div v-for="piece in piecesFiltrees" :key="piece.id" class="fiche">
+           <img :src="piece.image" :alt="piece.nom" class="image-piece">
+           <h3>{{ piece.nom }}</h3>
+             <p>Catégorie : {{ piece.categorie }}</p>
+             <p>Prix : {{ piece.prix }} MAD</p>
+             <p v-if="piece.disponible"> Disponible</p>
+               <p v-else> Indisponible</p>
+ <button @click="ajouterAuPanier(piece)">Ajouter au panier</button>
+
+</div>
+      </section>
+
+      <section class="panier" v-if="panier.length > 0">
+        <h3>Panier</h3>
+        <ul>
+          <li v-for="item in panier" :key="item.id">
+            {{ item.nom }} - {{ item.prix }} MAD
+          </li>
+        </ul>
+        <p><strong>Total : {{ totalPanier }} MAD</strong></p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
